@@ -586,17 +586,17 @@ noscript {
 }
 
 #hello-friend {
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 600;
     width: fit-content;
     display: flex;
     align-items: flex-end;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #name,
 #work {
-    font-size: 8rem;
+    font-size: 9rem;
     width: fit-content
 }
 
@@ -711,6 +711,32 @@ noscript {
     -webkit-animation: .9s both jello-vertical;
     animation: .9s both jello-vertical
 }
+
+.txt-rotate {
+    color: #000;
+    border-right: 0.08em solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  #work h1 {
+    font-size: 0.5em;
+    font-family: fira code;
+     /* adjust as needed */
+  }
+  
+  #work .txt-rotate {
+    font-size: 1em; /* adjust as needed */
+  }
+
+#work{
+    margin-top: 1rem; /* adjust as needed */
+}
+
+  #work .txt-rotate {
+    color: #333; /* adjust as needed */
+  }
 
 #backtotopbutton,
 .dp::after,
