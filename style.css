@@ -1898,6 +1898,16 @@ footer {
         font-size: 45%
     }
 
+    #work h1 {
+        font-size: 0.4em;
+        font-family: fira code;
+         /* adjust as needed */
+      }
+      
+      #work .txt-rotate {
+        font-size: 0.9em; /* adjust as needed */
+      }
+
     .hamburgerbase,
     .navbar {
         height: 70px
