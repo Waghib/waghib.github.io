@@ -1045,6 +1045,7 @@ noscript {
 
 .dp {
     width: 40%;
+    margin-left: 5%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -1251,7 +1252,7 @@ footer {
 
 .ProjectDescription {
     color: gray;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 400
 }
 
@@ -1874,6 +1875,9 @@ footer {
     .dp::before {
         display: none
     }
+    .dp{
+        margin-left: auto;
+    }
 
     .logo {
         width: 18%
@@ -2014,6 +2018,7 @@ footer {
     .logos {
         gap: 20px
     }
+
 }
 
 @media screen and (max-width:300px) {
