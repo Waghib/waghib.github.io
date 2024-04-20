@@ -197,8 +197,19 @@ function visualmode() {
   if (document.body.classList.contains("light-mode")) {
     // Change the src of the image
     document.querySelector(".dp img").src = "src/webp/about-me-img2.png";
+    document.querySelector(".txt-rotate").style.color = "#7B5CD1";
+    document.querySelectorAll(".tech-stack-box .tooltip").forEach(function(element) {
+      element.style.color = "black";
+    });
+
   } else {
     // Change the src back to the original image when light-mode is not active
     document.querySelector(".dp img").src = "src/webp/about-me-img1.png";
+    document.querySelector(".txt-rotate").style.color = "#333";
+    document.querySelectorAll(".tech-stack-box .tooltip").forEach(function(element) {
+      element.style.color = "#fff";
+    });
+
+
   }
 }
