@@ -48,6 +48,78 @@
   
   <!-- google fonts - load with display swap -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&display=swap" />
+  <style>
+    /* Existing styles */
+    /* ... */
+
+    /* Tech Stack Styles */
+    .tech-stack {
+      margin: 0.5rem 0;  
+      padding: 0.6rem;   
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tech-stack h4 {
+      margin: 0 0 0.3rem 0;  
+      color: #fff;
+      font-size: 0.95rem;    
+      font-family: 'fira code', monospace;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;  
+    }
+
+    .tech-tag {
+      padding: 0.2rem 0.6rem;  
+      border-radius: 16px;
+      background: rgba(128, 0, 255, 0.2);
+      color: #fff;
+      font-size: 0.8rem;      
+      transition: all 0.3s ease;
+      font-family: 'fira code', monospace;
+      border: 1px solid rgba(128, 0, 255, 0.3);
+    }
+
+    .tech-tag:hover {
+      background: rgba(128, 0, 255, 0.4);
+      transform: translateY(-1px);
+      border-color: #8000ff;
+    }
+
+    .ProjectDescription {
+      margin-bottom: 0.5rem;  
+    }
+
+    /* Light mode styles */
+    body.light-mode .tech-stack {
+      background: rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .tech-stack h4 {
+      color: #000;
+    }
+
+    body.light-mode .tech-tag {
+      background: rgba(128, 0, 255, 0.1);
+      color: #000;
+      border-color: rgba(128, 0, 255, 0.2);
+    }
+
+    body.light-mode .tech-tag:hover {
+      background: rgba(128, 0, 255, 0.2);
+      color: #000;
+      border-color: rgba(128, 0, 255, 0.4);
+    }
+  </style>
 </head>
 
 <body class="body">
@@ -364,11 +436,24 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <article class="ProjectHeading">MERN E-commerce Application</article>
+                <article class="ProjectHeading">E-commerce Application</article>
                 <p class="ProjectDescription">
-                  Fully-featured Ecommerce platform built with modern web technologies. Features include user authentication, product management, shopping cart, and secure payments. Deployed with containerization and cloud infrastructure. <br>
-                  Skills: MongoDB, Express.js, React.js, Node.js, Docker, Kubernetes, AWS, Terraform, Git
+                  Fully-featured Ecommerce platform. Features include user authentication, product catalog with search & filter, shopping cart with real-time updates, secure payment processing with Stripe, and admin dashboard for inventory management.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">Git</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/ecoomerce-application" target="_blank"
                     class="github-redirect" aria-label="Visit on GitHub">
@@ -385,18 +470,24 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <!-- <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" /> -->
-                <article class="ProjectHeading">Student Management System</article>
+                <article class="ProjectHeading" >Student Management System</article>
                 <p class="ProjectDescription">
-                  The Student Management System is a comprehensive desktop application. It utilizes an Oracle database
-                  backend and incorporates three modules: Teacher, Admin, and Student. <br>
-                  Skills: C++, .Net framework, Oracle Database, SQL and PL SQL
+                  Desktop application for comprehensive student data management. Features role-based access control, real-time grade tracking, attendance management, and advanced reporting with data visualization.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">.NET Framework</span>
+                    <span class="tech-tag">Oracle DB</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">PL/SQL</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/Student-Management-System-Desktop-Application" target="_blank"
                     class="github-redirect" aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
                   </a>
                 </div>
               </div>
@@ -409,22 +500,28 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
-                <!-- <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" /> -->
                 <article class="ProjectHeading">Candy Crush Game</article>
                 <p class="ProjectDescription">
-                  Candy Crush is a console base game developed in C++ to
-                  understand the concept of programming fundamentals.
+                  Console-based implementation of the popular Candy Crush game. Features include dynamic board generation, score tracking, special candy combinations, and level progression system.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">OOP</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/Candy-Crush" target="_blank" class="github-redirect"
                     aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
-                  </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/candy crush.png" alt="Student Management System preview image" />
+                <img src="src/webp/candy crush.png" alt="Candy Crush Game preview image" />
               </div>
             </div>
           </div>
@@ -434,19 +531,28 @@
               <div class="info-div">
                 <article class="ProjectHeading">Israel-Palestine Fatalities</article>
                 <p class="ProjectDescription">
-                  A desktop application for Israel-Palestine Fatalities data analysis. <br>
-                  skills: python, tkinter, matplotlib, pandas, numpy, seaborn
+                  Data analysis desktop application providing comprehensive insights into conflict-related fatalities. Features interactive visualizations, statistical analysis, and customizable data filtering.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Tkinter</span>
+                    <span class="tech-tag">Matplotlib</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">Seaborn</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/Israel-Palestine_Data_Analysis" target="_blank"
                     class="github-redirect" aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
-                  </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/Israel-palestine.png" alt="Israel-Palestine Data Analysis preview image" />
+                <img src="src/webp/Israel-palestine.png" alt="Israel-Palestine Fatalities preview image" />
               </div>
             </div>
           </div>
@@ -456,15 +562,22 @@
               <div class="info-div">
                 <article class="ProjectHeading">Autonomous Delivery Robot</article>
                 <p class="ProjectDescription">
-                  Developed an autonomous delivery robot, implementing A* pathfinding AI algorithm and real-time
-                  visualization for efficient navigation and obstacle avoidance.<br>
-                  skills: Python, Pygame, NumPy, A* Algorithm, Pathfinding
+                  Advanced pathfinding robot simulation with real-time obstacle avoidance. Features dynamic path recalculation, efficiency optimization, and interactive visualization of robot navigation.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pygame</span>
+                    <span class="tech-tag">NumPy</span>
+                    <span class="tech-tag">A* Algorithm</span>
+                    <span class="tech-tag">Path Planning</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/Autonomous-Delivery-Robot" target="_blank" class="github-redirect"
                     aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
                   </a>
                 </div>
               </div>
@@ -478,17 +591,24 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
-                <!-- <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" /> -->
                 <article class="ProjectHeading">AI Image Generator</article>
                 <p class="ProjectDescription">
-                  Desktop application to generate images using openAI API. <br>
-                  skills: python, openAI API, tkinter, custom tkinter, requests, OS
+                  Desktop application to generate images using openAI API. Features include customizable image generation, real-time preview, and image saving capabilities.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">OpenAI API</span>
+                    <span class="tech-tag">Tkinter</span>
+                    <span class="tech-tag">Requests</span>
+                    <span class="tech-tag">OS</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/AI-IMAGE-GENERATION" target="_blank" class="github-redirect"
                     aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
                   </a>
                 </div>
               </div>
@@ -501,24 +621,29 @@
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
-                <!-- <img src="src/webp/pexelicon-favicon.webp" alt="pexelicon website favicon" class="faviconforProject" /> -->
                 <article class="ProjectHeading">Text Editor</article>
                 <p class="ProjectDescription">
-                  Console based Text Editor/Notepad. It offers efficient text storage using Huffman encoding and
-                  provides intelligent word suggestions based on a pre-defined dictionary using trie-based data
-                  structures. <br>
-                  skills: data structures, c++, file handling, algorithms, huffman encoding and trie trees.
+                  Console-based Text Editor/Notepad. Features include efficient text storage using Huffman encoding, intelligent word suggestions based on a pre-defined dictionary using trie-based data structures, and customizable font sizes.
                 </p>
+                <div class="tech-stack">
+                  <h4>🛠️ Tech Stack</h4>
+                  <div class="tech-tags">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Data Structures</span>
+                    <span class="tech-tag">Algorithms</span>
+                    <span class="tech-tag">Huffman Encoding</span>
+                    <span class="tech-tag">Trie Trees</span>
+                  </div>
+                </div>
                 <div class="project-buttons">
                   <a href="https://github.com/Waghib/Text-Editor" target="_blank" class="github-redirect"
                     aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
-                  </a>
                 </div>
               </div>
               <div class="image-div">
-                <img src="src/webp/text-editor.png" alt="Text-Editor preview image" />
+                <img src="src/webp/text-editor.png" alt="Text Editor preview image" />
               </div>
             </div>
           </div>
@@ -565,7 +690,7 @@
             <a href="https://github.com/waghib" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
                 class="SocialHandle">
                 <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
             <a href="mailto:waghibahmad30@gmail.com" target="_blank" aria-label="My G mail"><svg
