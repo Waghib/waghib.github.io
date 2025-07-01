@@ -6,14 +6,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Preload critical resources -->
   <link rel="preload" href="style.css" as="style">
   <link rel="preload" href="main.js" as="script">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://unpkg.com">
-  
+
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
   <meta name="description"
@@ -37,34 +37,39 @@
     content="Hi! My name is Waghib. I'm a web developer. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
   <title>Waghib Ahmad | Portfolio</title>
   <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
-  
+
   <!-- stylesheet -->
   <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="style.css"></noscript>
-  
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+  </noscript>
+
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"></noscript>
-  
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  </noscript>
+
   <!-- google fonts - load with display swap -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps&display=swap" />
   <style>
     /* Existing styles */
     /* ... */
 
     /* Tech Stack Styles */
     .tech-stack {
-      margin: 0.5rem 0;  
-      padding: 0.6rem;   
+      margin: 0.5rem 0;
+      padding: 0.6rem;
       border-radius: 8px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .tech-stack h4 {
-      margin: 0 0 0.3rem 0;  
+      margin: 0 0 0.3rem 0;
       color: #fff;
-      font-size: 0.95rem;    
+      font-size: 0.95rem;
       font-family: 'fira code', monospace;
       display: flex;
       align-items: center;
@@ -74,15 +79,15 @@
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;  
+      gap: 0.4rem;
     }
 
     .tech-tag {
-      padding: 0.2rem 0.6rem;  
+      padding: 0.2rem 0.6rem;
       border-radius: 16px;
       background: rgba(128, 0, 255, 0.2);
       color: #fff;
-      font-size: 0.8rem;      
+      font-size: 0.8rem;
       transition: all 0.3s ease;
       font-family: 'fira code', monospace;
       border: 1px solid rgba(128, 0, 255, 0.3);
@@ -95,7 +100,7 @@
     }
 
     .ProjectDescription {
-      margin-bottom: 0.5rem;  
+      margin-bottom: 0.5rem;
     }
 
     /* Light mode styles */
@@ -319,9 +324,10 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Hi! I'm Waghib, a dedicated Computer Science student with a strong foundation in full-stack development, 
+              Hi! I'm Waghib, a dedicated Computer Science student with a strong foundation in full-stack development,
               DevOps, and AI-driven solutions. My expertise spans the MERN stack, C/C++, Python, SQL, and cloud-native
-              technologies like Docker, Kubernetes, and Terraform. I am passionate about building scalable web applications
+              technologies like Docker, Kubernetes, and Terraform. I am passionate about building scalable web
+              applications
               and exploring the transformative potential of Large Language Models in automation and Generative AI.
               <br><br>
               I actively contribute to open-source projects, attend CS meetups, and develop AI-powered and cloud-native
@@ -454,12 +460,112 @@
         </div>
         <div class="project-boxes-div">
 
+          <!-- DM Decoder -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <a href="https://reply-mind.lovable.app/" target="_blank"
+              style="text-decoration: none; color: inherit; cursor: pointer;">
+              <div class="project-box project-box5" id="project-box5">
+                <div class="info-div">
+                  <article style="font-size: 3rem; margin-bottom: 1.5rem;" class="ProjectHeading">DM Decoder</article>
+                  <p class="ProjectDescription">
+                    AI-powered web app that analyzes message intent and generates smart, human-like replies with
+                    customizable tones for any communication context.
+                    <br>
+                    <br>
+
+                  </p>
+                  <div class="tech-stack">
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-tags">
+                      <span class="tech-tag">React.js</span>
+                      <span class="tech-tag">TypeScript</span>
+                      <span class="tech-tag">Vite</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">Supabase</span>
+                      <span class="tech-tag">Stripe</span>
+                      <span class="tech-tag">Google Gemini API</span>
+                      <span class="tech-tag">React Router</span>
+                    </div>
+                  </div>
+                  <div class="project-buttons">
+                    <a href="https://github.com/Waghib/reply-alchemy-decode" target="_blank" class="github-redirect"
+                      aria-label="Visit on GitHub" onclick="event.stopPropagation();">
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                    </a>
+                    <a href="https://reply-mind.lovable.app/" target="_blank" class="cta"
+                      aria-label="Visit NoteSync Live">
+                      <span>Live view</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img src="src/png/dm-decoder-preview.png" alt="DM Decoder preview image" />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Authentication System -->
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <a href="https://authentication-system-psi.vercel.app" target="_blank"
+              style="text-decoration: none; color: inherit; cursor: pointer;">
+              <div class="project-box project-box5" id="project-box5">
+                <div class="info-div">
+                  <article style="font-size: 3rem; margin-bottom: 1.5rem;" class="ProjectHeading">Authentication System
+                  </article>
+                  <p class="ProjectDescription">
+                    A modern, secure authentication system built with the MERN stack (MongoDB, Express, React, Node.js).
+                    <br>
+                    <br>
+
+                  </p>
+                  <div class="tech-stack">
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-tags">
+                      <span class="tech-tag">React.js</span>
+                      <span class="tech-tag">Node.js</span>
+                      <span class="tech-tag">Express.js</span>
+                      <span class="tech-tag">MongoDB</span>
+                      <span class="tech-tag">JWT</span>
+                      <span class="tech-tag">Bcrypt</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">Nodemailer</span>
+                    </div>
+                  </div>
+                  <div class="project-buttons">
+                    <a href="https://github.com/Waghib/Authentication-System" target="_blank" class="github-redirect"
+                      aria-label="Visit on GitHub" onclick="event.stopPropagation();">
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                    </a>
+                    <a href="https://authentication-system-psi.vercel.app" target="_blank" class="cta"
+                      aria-label="Visit NoteSync Live">
+                      <span>Live view</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-div">
+                  <img src="src/png/auth-preview.png" alt="Authentication System preview image" />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- PlannerAI -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
                 <article class="ProjectHeading">PlannerAI (Speech-To-Plan)</article>
                 <p class="ProjectDescription">
-                  Chrome extension converting voice inputs to organized tasks. Uses OpenAI Whisper for speech recognition, Gemini for task analysis, with Google Calendar integration.
+                  Chrome extension converting voice inputs to organized tasks. Uses OpenAI Whisper for speech
+                  recognition, Gemini for task analysis, with Google Calendar integration.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -474,8 +580,8 @@
                   </div>
                 </div>
                 <div class="project-buttons">
-                  <a href="https://github.com/waghib/Speech-To-Plan-reminder" target="_blank"
-                    class="github-redirect" aria-label="Visit on GitHub">
+                  <a href="https://github.com/waghib/Speech-To-Plan-reminder" target="_blank" class="github-redirect"
+                    aria-label="Visit on GitHub">
                     <img src="src/svg/github.svg" alt="github redirect button" />
                   </a>
                 </div>
@@ -486,13 +592,21 @@
             </div>
           </div>
 
+          <!-- Gemini Chat Application -->
           <div data-aos="fade-up" class="project-box-wrapper">
-            <a href="https://gemini-chat-bot-ecru.vercel.app/chat" target="_blank" style="text-decoration: none; color: inherit; cursor: pointer;">
+            <a href="https://gemini-chat-bot-ecru.vercel.app/chat" target="_blank"
+              style="text-decoration: none; color: inherit; cursor: pointer;">
               <div class="project-box project-box5" id="project-box5">
                 <div class="info-div">
-                  <article style="font-size: 3rem; margin-bottom: 1.5rem;" class="ProjectHeading" >Gemini Chat Application</article>
+                  <article style="font-size: 3rem; margin-bottom: 1.5rem;" class="ProjectHeading">Gemini Chat
+                    Application</article>
                   <p class="ProjectDescription">
-                    Chat application using React for the frontend, Node.js for the backend, and MongoDB for storing conversation history. The application leverages Google's Gemini API for generating intelligent responses with a modern, responsive UI.
+                    Chat application using React, Node.js, Express.js, and MongoDB for storing conversation history. The
+                    application uses Google's Gemini API for generating intelligent responses with a modern, responsive
+                    UI.
+                    <br>
+                    <br>
+
                   </p>
                   <div class="tech-stack">
                     <h4>🛠️ Tech Stack</h4>
@@ -512,6 +626,14 @@
                       aria-label="Visit on GitHub" onclick="event.stopPropagation();">
                       <img src="src/svg/github.svg" alt="github redirect button" />
                     </a>
+                    <a href="https://gemini-chat-bot-ecru.vercel.app/chat" target="_blank" class="cta"
+                      aria-label="Visit NoteSync Live">
+                      <span>Live view</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
                   </div>
                 </div>
                 <div class="image-div">
@@ -521,45 +643,64 @@
             </a>
           </div>
 
+          <!-- E-commerce Application -->
           <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <article style="font-size: 3rem;" class="ProjectHeading">E-commerce Application</article>
-                <p class="ProjectDescription">
-                  Fully-featured Ecommerce platform. Features include user authentication, product catalog with search & filter, shopping cart with real-time updates, secure payment processing, and admin dashboard for inventory management.
-                </p>
-                <div class="tech-stack">
-                  <h4>🛠️ Tech Stack</h4>
-                  <div class="tech-tags">
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Express.js</span>
-                    <span class="tech-tag">React.js</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Kubernetes</span>
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">Terraform</span>
+            <a href="https://mern-store-gold.vercel.app" target="_blank"
+              style="text-decoration: none; color: inherit; cursor: pointer;">
+              <div class="project-box project-box2" id="project-box2">
+                <div class="info-div">
+                  <article style="font-size: 3rem;" class="ProjectHeading">E-commerce Application</article><br>
+                  <p class="ProjectDescription">
+                    Fully-featured Ecommerce platform. Features include user authentication, product catalog with search
+                    & filter, shopping cart with real-time updates, secure payment processing, and admin dashboard for
+                    inventory management.
+                  </p>
+                  <br>
+                  <div class="tech-stack">
+                    <h4>🛠️ Tech Stack</h4>
+                    <div class="tech-tags">
+                      <span class="tech-tag">MongoDB</span>
+                      <span class="tech-tag">Express.js</span>
+                      <span class="tech-tag">React.js</span>
+                      <span class="tech-tag">Node.js</span>
+                      <span class="tech-tag">Docker</span>
+                      <span class="tech-tag">Kubernetes</span>
+                      <span class="tech-tag">AWS</span>
+                      <span class="tech-tag">Terraform</span>
+                      <span class="tech-tag">CI/CD</span>
+
+                    </div>
+                  </div>
+                  <div class="project-buttons">
+                    <a href="https://github.com/Waghib/ecoomerce-application" target="_blank" class="github-redirect"
+                      aria-label="Visit on GitHub">
+                      <img src="src/svg/github.svg" alt="github redirect button" />
+                    </a>
+                    <a href="https://mern-store-gold.vercel.app" target="_blank" class="cta"
+                      aria-label="Visit NoteSync Live">
+                      <span>Live view</span>
+                      <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                      </svg>
+                    </a>
                   </div>
                 </div>
-                <div class="project-buttons">
-                  <a href="https://github.com/Waghib/ecoomerce-application" target="_blank"
-                    class="github-redirect" aria-label="Visit on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
+                <div class="image-div">
+                  <img src="src/webp/mern-app.png" alt="MERN E-commerce Application preview image" />
                 </div>
               </div>
-              <div class="image-div">
-                <img src="src/webp/mern-app.png" alt="MERN E-commerce Application preview image" />
-              </div>
-            </div>
+            </a>
           </div>
 
+          <!-- Student Management System -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
-                <article style="font-size: 3rem;" class="ProjectHeading" >Student Management System</article>
+                <article style="font-size: 3rem;" class="ProjectHeading">Student Management System</article>
                 <p class="ProjectDescription">
-                  Desktop application for student data management. Features role-based access control, real-time grade tracking, attendance management, and reporting with data visualization.
+                  Desktop application for student data management. Features role-based access control, real-time grade
+                  tracking, attendance management, and reporting with data visualization.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -584,12 +725,14 @@
             </div>
           </div>
 
+          <!-- Candy Crush Game -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
                 <article class="ProjectHeading">Candy Crush Game</article>
                 <p class="ProjectDescription">
-                  Console-based implementation of the popular Candy Crush game. Features include dynamic board generation, score tracking, special candy combinations, and level progression system.
+                  Console-based implementation of the popular Candy Crush game. Features include dynamic board
+                  generation, score tracking, special candy combinations, and level progression system.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -613,12 +756,14 @@
             </div>
           </div>
 
+          <!-- Israel-Palestine Fatalities -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
                 <article class="ProjectHeading">Israel-Palestine Fatalities</article>
                 <p class="ProjectDescription">
-                  Data analysis desktop application providing comprehensive insights into conflict-related fatalities. Features interactive visualizations, statistical analysis, and customizable data filtering.
+                  Data analysis desktop application providing comprehensive insights into conflict-related fatalities.
+                  Features interactive visualizations, statistical analysis, and customizable data filtering.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -644,12 +789,14 @@
             </div>
           </div>
 
+          <!-- Autonomous Delivery Robot -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
                 <article class="ProjectHeading">Autonomous Delivery Robot</article>
                 <p class="ProjectDescription">
-                  Advanced pathfinding robot simulation with real-time obstacle avoidance. Features dynamic path recalculation, efficiency optimization, and interactive visualization of robot navigation.
+                  Advanced pathfinding robot simulation with real-time obstacle avoidance. Features dynamic path
+                  recalculation, efficiency optimization, and interactive visualization of robot navigation.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -674,13 +821,14 @@
             </div>
           </div>
 
-          <!-- ---------------------- -->
+          <!-- AI Image Generator -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
                 <article class="ProjectHeading">AI Image Generator</article>
                 <p class="ProjectDescription">
-                  Desktop application to generate images using openAI API. Features include customizable image generation, real-time preview, and image saving capabilities.
+                  Desktop application to generate images using openAI API. Features include customizable image
+                  generation, real-time preview, and image saving capabilities.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -705,12 +853,15 @@
             </div>
           </div>
 
+          <!-- Text Editor -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box5" id="project-box5">
               <div class="info-div">
                 <article class="ProjectHeading">Text Editor</article>
                 <p class="ProjectDescription">
-                  Console-based Text Editor/Notepad. Features include efficient text storage using Huffman encoding, intelligent word suggestions based on a pre-defined dictionary using trie-based data structures, and customizable font sizes.
+                  Console-based Text Editor/Notepad. Features include efficient text storage using Huffman encoding,
+                  intelligent word suggestions based on a pre-defined dictionary using trie-based data structures, and
+                  customizable font sizes.
                 </p>
                 <div class="tech-stack">
                   <h4>🛠️ Tech Stack</h4>
@@ -782,8 +933,8 @@
                   d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
               </svg></a>
 
-            <a href="mailto:waghibahmad30@gmail.com" target="_blank" aria-label="My G mail"><svg
-                id="GmailLogo" viewBox="0 0 512 512">
+            <a href="mailto:waghibahmad30@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+                viewBox="0 0 512 512">
                 <path
                   d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
               </svg></a>
@@ -815,7 +966,7 @@
   <script src="main.js" defer></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
   <script>
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       AOS.init();
     });
   </script>
