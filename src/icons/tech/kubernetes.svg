@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Kubernetes">
+  <polygon points="60,10 104,34 104,84 60,110 16,84 16,34" fill="#326ce5"/>
+  <circle cx="60" cy="60" r="22" fill="none" stroke="#fff" stroke-width="8"/>
+  <path d="M60 28v20M60 72v20M28 60h20M72 60h20M39 39l14 14M67 67l14 14M81 39 67 53M53 67 39 81" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+</svg>

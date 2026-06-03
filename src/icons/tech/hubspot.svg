@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="HubSpot">
+  <rect width="120" height="120" rx="20" fill="#241611"/>
+  <circle cx="64" cy="64" r="24" fill="#ff7a59"/>
+  <circle cx="88" cy="35" r="10" fill="#ff7a59"/>
+  <circle cx="36" cy="82" r="9" fill="#ff7a59"/>
+  <path d="M77 47 84 41M48 76 57 68M64 40V24" stroke="#ff7a59" stroke-width="7" stroke-linecap="round"/>
+</svg>

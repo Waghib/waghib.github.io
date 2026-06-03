@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Firebase Firestore">
+  <rect width="120" height="120" rx="20" fill="#221b10"/>
+  <path d="M28 92 42 18l18 34 14-25 18 65-32 18z" fill="#ffca28"/>
+  <path d="M60 52 28 92l32 18 32-18z" fill="#ffa000"/>
+</svg>

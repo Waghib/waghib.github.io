@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Docker">
+  <rect width="120" height="120" rx="20" fill="#102236"/>
+  <path d="M30 60h58c-4 20-18 30-38 30-16 0-29-8-36-22h16z" fill="#2496ed"/>
+  <path d="M34 44h12v12H34zm15 0h12v12H49zm15 0h12v12H64zM49 29h12v12H49zm15 0h12v12H64z" fill="#6bc5f8"/>
+</svg>
