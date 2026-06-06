@@ -1,19 +1,16 @@
-#labelforsetting,
 #labelforvisualmode,
 #switchforvisualmode:checked+#labelforvisualmode {
     background-repeat: no-repeat;
     background-position: center
 }
 
-#labelforsetting,
 #labelforsound {
     height: 40px;
     background-size: 60%
 }
 
 #preloader,
-.invertapplied,
-.invertsettinglabel {
+.invertapplied {
     filter: invert(1)
 }
 
@@ -149,12 +146,6 @@ html {
     pointer-events: none
 }
 
-.setting-container,
-.settingactivate {
-    transform-origin: left;
-    transition-duration: .5s
-}
-
 .cursor-inner.hover {
     width: 25px;
     height: 25px;
@@ -190,51 +181,6 @@ html {
     --tech-stack-box-border-color: #dad5cf
 }
 
-.setting-container {
-    width: 60px;
-    height: 50px;
-    margin-left: 50px;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 20px 0
-}
-
-#labelforsetting {
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    background-image: url(src/svg/settings-svgrepo-com.svg);
-    transition-duration: .5s;
-    cursor: pointer
-}
-
-.soundtogglebuttoncontainer,
-.visualmodetogglebuttoncontainer {
-    align-items: center;
-    width: fit-content;
-    transition-duration: .3s
-}
-
-.settingactivate {
-    width: 200px
-}
-
-.visualmodetogglebuttoncontainer {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    transform: translate(-50px) scale(0)
-}
-
-.visualmodeshow {
-    transition-duration: .3s;
-    transform: translate(0) scale(1)
-}
-
-#switchforsetting,
 #switchforsound,
 #switchforvisualmode,
 .hamburger,
@@ -242,13 +188,11 @@ html {
     display: none
 }
 
-#switchforsetting:checked+#labelforsetting {
-    transform: rotate(180deg);
-    transition-duration: .5s
-}
-
 #labelforvisualmode {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     background-image: url(src/png/crescent-moon\ \(1\).png);
@@ -264,26 +208,12 @@ html {
     background-size: 60%
 }
 
-.soundtogglebuttoncontainer {
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    transform: translate(-130px) scale(0)
-}
-
 #labelforsound,
 #preloader {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-position: center
-}
-
-.soundmodeshow {
-    transition-delay: .1s;
-    transition-duration: .5s;
-    display: inline-block;
-    transform: translate(0) scale(1)
 }
 
 .logo,
@@ -295,6 +225,7 @@ html {
     position: relative;
     justify-content: center;
     width: 40px;
+    height: 40px;
     background-image: url(src/svg/Mute_Icon.svg);
     cursor: pointer;
     transition-duration: .5s
@@ -358,6 +289,7 @@ noscript {
     height: 80px;
     width: 80%;
     padding: 0 20px;
+    gap: 18px;
     justify-content: space-between;
     z-index: 999;
     border: 1px solid var(--color-navbarBorder-dark);
@@ -378,7 +310,8 @@ noscript {
 
 .navbar-tabs {
     display: flex;
-    width: 80%
+    flex: 1;
+    min-width: 0
 }
 
 .navbar-tabs-ul {
@@ -386,7 +319,7 @@ noscript {
     display: flex;
     list-style: none;
     justify-content: flex-end;
-    gap: 56px;
+    gap: clamp(24px, 4vw, 56px);
     color: var(--color-white)
 }
 
@@ -409,6 +342,34 @@ noscript {
 .navbar-tabs-ul a {
     color: var(--color-white);
     font-weight: 100
+}
+
+.navbar-actions {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 14px;
+    border-left: 1px solid var(--color-navbarBorder-dark)
+}
+
+.nav-toggle-control {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.nav-toggle-control label {
+    border-radius: 50%;
+    outline: 1px solid transparent
+}
+
+.nav-toggle-control label:hover,
+.nav-toggle-control label:focus-visible {
+    background-color: rgba(255, 255, 255, .08);
+    outline-color: rgba(255, 255, 255, .22)
 }
 
 .logo {
@@ -1120,6 +1081,71 @@ noscript {
         0 0 22px rgba(115, 190, 255, .1)
 }
 
+body.light-mode .experience-card {
+    color: #111827;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(245, 239, 232, .72));
+    border-color: rgba(107, 197, 248, .34);
+    box-shadow: 0 22px 48px rgba(75, 85, 99, .18)
+}
+
+body.light-mode .experience-card::before {
+    opacity: .28;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(128, 0, 255, .13), transparent 24%),
+        radial-gradient(circle at 92% 0%, rgba(107, 197, 248, .16), transparent 30%)
+}
+
+body.light-mode .experience-timeline-rail {
+    background: rgba(255, 255, 255, .42);
+    border-right-color: rgba(15, 23, 42, .08)
+}
+
+body.light-mode .experience-kicker,
+body.light-mode .experience-highlights span,
+body.light-mode .impact-grid span {
+    color: #9b28e8
+}
+
+body.light-mode .experience-card h3 {
+    color: #050816
+}
+
+body.light-mode .experience-card-header span {
+    color: #64748b;
+    background: rgba(255, 255, 255, .58);
+    border-color: rgba(15, 23, 42, .08)
+}
+
+body.light-mode .experience-summary {
+    color: #4b5563
+}
+
+body.light-mode .experience-highlights div,
+body.light-mode .impact-grid article {
+    background: rgba(255, 255, 255, .52);
+    border-color: rgba(15, 23, 42, .08)
+}
+
+body.light-mode .experience-highlights p,
+body.light-mode .impact-grid p {
+    color: #1f2937
+}
+
+body.light-mode .experience-card:hover .impact-grid article,
+body.light-mode .experience-card:focus-within .impact-grid article {
+    border-color: rgba(159, 57, 255, .34);
+    background: rgba(128, 0, 255, .065)
+}
+
+body.light-mode .experience-card:hover,
+body.light-mode .experience-card:focus-within {
+    border-color: rgba(128, 0, 255, .58);
+    box-shadow:
+        0 18px 44px rgba(75, 85, 99, .16),
+        0 0 0 1px rgba(128, 0, 255, .22),
+        0 0 28px rgba(128, 0, 255, .16)
+}
+
 .experience-timeline-rail {
     position: relative;
     z-index: 1;
@@ -1456,6 +1482,18 @@ noscript {
     color: var(--color-white)
 }
 
+body.light-mode .tech-stack-box:hover {
+    border-color: rgba(128, 0, 255, .5);
+    box-shadow: 0 18px 42px rgba(75, 85, 99, .16), 0 0 0 1px rgba(128, 0, 255, .16) inset
+}
+
+body.light-mode .tooltip {
+    color: #fff;
+    background: rgba(17, 24, 39, .9);
+    border-color: rgba(128, 0, 255, .35);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .18)
+}
+
 .cta,
 .cta span,
 .cta svg,
@@ -1506,6 +1544,23 @@ footer {
     position: relative
 }
 
+body.light-mode .project-box {
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .86), rgba(245, 239, 232, .74));
+    border-color: rgba(107, 197, 248, .32);
+    box-shadow: 0 18px 44px rgba(75, 85, 99, .14)
+}
+
+body.light-mode .project-box:hover,
+body.light-mode .project-box-wrapper:hover .project-box,
+body.light-mode .project-box-wrapper:focus-within .project-box,
+body.light-mode .project-box-wrapper.project-card-active .project-box {
+    border-color: rgba(128, 0, 255, .58);
+    box-shadow:
+        0 18px 44px rgba(75, 85, 99, .16),
+        0 0 0 1px rgba(128, 0, 255, .22),
+        0 0 28px rgba(128, 0, 255, .15)
+}
+
 .project-box::before {
     content: "";
     position: absolute;
@@ -1517,6 +1572,12 @@ footer {
         radial-gradient(circle at 20% 18%, rgba(77, 176, 255, .18), transparent 28%),
         radial-gradient(circle at 78% 16%, rgba(163, 81, 255, .16), transparent 30%);
     transition: opacity .28s ease
+}
+
+body.light-mode .project-box::before {
+    background:
+        radial-gradient(circle at 20% 18%, rgba(128, 0, 255, .16), transparent 28%),
+        radial-gradient(circle at 78% 16%, rgba(207, 89, 230, .14), transparent 30%)
 }
 
 .project-box>* {
@@ -1621,12 +1682,24 @@ footer {
     transition: color .25s ease, text-shadow .25s ease
 }
 
+body.light-mode .ProjectHeading {
+    color: #111827
+}
+
 .project-box:hover .ProjectHeading,
 .project-box-wrapper:hover .ProjectHeading,
 .project-box-wrapper:focus-within .ProjectHeading,
 .project-box-wrapper.project-card-active .ProjectHeading {
     color: #f5fbff;
     text-shadow: 0 0 12px rgba(115, 190, 255, .14)
+}
+
+body.light-mode .project-box:hover .ProjectHeading,
+body.light-mode .project-box-wrapper:hover .ProjectHeading,
+body.light-mode .project-box-wrapper:focus-within .ProjectHeading,
+body.light-mode .project-box-wrapper.project-card-active .ProjectHeading {
+    color: #111827;
+    text-shadow: none
 }
 
 .ProjectDescription {
@@ -1640,6 +1713,17 @@ footer {
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden
+}
+
+body.light-mode .ProjectDescription {
+    color: #4b5563
+}
+
+body.light-mode .project-box:hover .ProjectDescription,
+body.light-mode .project-box-wrapper:hover .ProjectDescription,
+body.light-mode .project-box-wrapper:focus-within .ProjectDescription,
+body.light-mode .project-box-wrapper.project-card-active .ProjectDescription {
+    color: #4b5563
 }
 
 .tech-stack {
@@ -1686,6 +1770,19 @@ footer {
 body.light-mode .tech-stack {
     background: rgba(0, 0, 0, .03);
     border: 1px solid rgba(0, 0, 0, .1)
+}
+
+body.light-mode .project-box .tech-stack {
+    background: rgba(255, 255, 255, .42);
+    border-color: rgba(128, 0, 255, .18)
+}
+
+body.light-mode .project-box:hover .tech-stack,
+body.light-mode .project-box-wrapper:hover .project-box .tech-stack,
+body.light-mode .project-box-wrapper:focus-within .project-box .tech-stack,
+body.light-mode .project-box-wrapper.project-card-active .project-box .tech-stack {
+    background: rgba(128, 0, 255, .045);
+    border-color: rgba(128, 0, 255, .34)
 }
 
 body.light-mode .tech-stack h4,
@@ -1743,12 +1840,52 @@ body.light-mode .tech-tag:hover {
     color: #dff4ff
 }
 
+body.light-mode .project-box:hover .tech-tag,
+body.light-mode .project-box-wrapper:hover .project-box .tech-tag,
+body.light-mode .project-box-wrapper:focus-within .project-box .tech-tag,
+body.light-mode .project-box-wrapper.project-card-active .project-box .tech-tag {
+    color: #1f2937;
+    border-color: rgba(128, 0, 255, .38);
+    background-color: rgba(128, 0, 255, .12)
+}
+
 .project-box:hover .cta,
 .project-box-wrapper:hover .cta,
 .project-box-wrapper:focus-within .cta,
 .project-box-wrapper.project-card-active .cta {
     color: #68caff;
     transform: none
+}
+
+body.light-mode .project-box .cta span,
+body.light-mode .project-box .cta svg {
+    color: #8a1dff;
+    stroke: #8a1dff
+}
+
+body.light-mode .project-box .cta::before {
+    background: rgba(128, 0, 255, .12)
+}
+
+body.light-mode .project-box:hover .cta span,
+body.light-mode .project-box-wrapper:hover .cta span,
+body.light-mode .project-box-wrapper:focus-within .cta span,
+body.light-mode .project-box-wrapper.project-card-active .cta span {
+    color: #8a1dff
+}
+
+body.light-mode .project-box:hover .cta svg,
+body.light-mode .project-box-wrapper:hover .cta svg,
+body.light-mode .project-box-wrapper:focus-within .cta svg,
+body.light-mode .project-box-wrapper.project-card-active .cta svg {
+    stroke: #8a1dff
+}
+
+body.light-mode .project-box:hover .cta::before,
+body.light-mode .project-box-wrapper:hover .cta::before,
+body.light-mode .project-box-wrapper:focus-within .cta::before,
+body.light-mode .project-box-wrapper.project-card-active .cta::before {
+    background: rgba(128, 0, 255, .18)
 }
 
 .project-buttons {
@@ -1763,7 +1900,11 @@ body.light-mode .tech-tag:hover {
 
 .github-redirect {
     width: 44px;
-    flex: 0 0 44px
+    height: 44px;
+    flex: 0 0 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center
 }
 
 .github-redirect img {
@@ -1775,6 +1916,24 @@ body.light-mode .tech-tag:hover {
 
 .github-redirect:hover img {
     filter: brightness(4)
+}
+
+.project-card-planner .ProjectHeading {
+    font-size: clamp(2.25rem, 1.8vw, 2.85rem) !important
+}
+
+.project-card-planner .info-div {
+    gap: 10px;
+    padding-bottom: 18px
+}
+
+.project-card-planner .project-buttons {
+    align-items: center;
+    min-height: 40px
+}
+
+.project-card-planner .github-redirect {
+    align-self: center
 }
 
 .cta {
@@ -1827,6 +1986,58 @@ body.light-mode .tech-tag:hover {
 
 .cta:active {
     transform: scale(.95)
+}
+
+body.light-mode .experience-card:hover,
+body.light-mode .experience-card:focus-within {
+    border-color: rgba(128, 0, 255, .58);
+    box-shadow:
+        0 18px 44px rgba(75, 85, 99, .16),
+        0 0 0 1px rgba(128, 0, 255, .22),
+        0 0 28px rgba(128, 0, 255, .16)
+}
+
+body.light-mode .project-box-wrapper:hover .project-box,
+body.light-mode .project-box-wrapper:focus-within .project-box,
+body.light-mode .project-box-wrapper.project-card-active .project-box {
+    border-color: rgba(128, 0, 255, .58);
+    box-shadow:
+        0 18px 44px rgba(75, 85, 99, .16),
+        0 0 0 1px rgba(128, 0, 255, .22),
+        0 0 28px rgba(128, 0, 255, .15)
+}
+
+body.light-mode .project-box-wrapper:hover .project-box .tech-stack,
+body.light-mode .project-box-wrapper:focus-within .project-box .tech-stack,
+body.light-mode .project-box-wrapper.project-card-active .project-box .tech-stack {
+    background: rgba(128, 0, 255, .045);
+    border-color: rgba(128, 0, 255, .34)
+}
+
+body.light-mode .project-box-wrapper:hover .project-box .tech-tag,
+body.light-mode .project-box-wrapper:focus-within .project-box .tech-tag,
+body.light-mode .project-box-wrapper.project-card-active .project-box .tech-tag {
+    color: #1f2937;
+    border-color: rgba(128, 0, 255, .38);
+    background-color: rgba(128, 0, 255, .12)
+}
+
+body.light-mode .project-box .cta span {
+    color: #8a1dff
+}
+
+body.light-mode .project-box .cta svg {
+    stroke: #8a1dff
+}
+
+body.light-mode .project-box .cta::before {
+    background: rgba(128, 0, 255, .12)
+}
+
+body.light-mode .project-box-wrapper:hover .cta::before,
+body.light-mode .project-box-wrapper:focus-within .cta::before,
+body.light-mode .project-box-wrapper.project-card-active .cta::before {
+    background: rgba(128, 0, 255, .18)
 }
 
 #backtotopbutton {
@@ -2170,7 +2381,14 @@ footer {
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        z-index: 9998
+        z-index: 9998;
+        pointer-events: none
+    }
+
+    .navbar-actions {
+        margin-left: auto;
+        margin-right: 58px;
+        padding-left: 12px
     }
 
     .activeThismobiletab:before,
@@ -2199,7 +2417,8 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between
+        justify-content: space-between;
+        pointer-events: auto
     }
 
     #burger-bar1,
@@ -2400,10 +2619,6 @@ footer {
         align-items: flex-start;
         justify-content: flex-start;
         gap: 20px
-    }
-
-    .setting-container {
-        margin-left: 0
     }
 
     .dp::after,

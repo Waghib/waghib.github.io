@@ -11,16 +11,6 @@ const sections = document.querySelectorAll("section");
 const navItems = document.querySelectorAll(".navbar .navbar-tabs .navbar-tabs-ul li");
 const mobileNavItems = document.querySelectorAll(".mobiletogglemenu .mobile-navbar-tabs-ul li");
 
-function settingtoggle() {
-  document.getElementById("setting-container")?.classList.toggle("settingactivate");
-  document
-    .getElementById("visualmodetogglebuttoncontainer")
-    ?.classList.toggle("visualmodeshow");
-  document
-    .getElementById("soundtogglebuttoncontainer")
-    ?.classList.toggle("soundmodeshow");
-}
-
 function playpause() {
   const soundSwitch = document.getElementById("switchforsound");
 
@@ -47,18 +37,12 @@ function visualmode() {
   const rotatingText = document.querySelector(".txt-rotate");
 
   if (profileImage) {
-    profileImage.src = isLightMode
-      ? "src/webp/about-me-img2.webp"
-      : "src/webp/about-me-img1.webp";
+    profileImage.src = "src/webp/about-me-img1.webp";
   }
 
   if (rotatingText) {
     rotatingText.style.color = isLightMode ? "#7B5CD1" : "#333";
   }
-
-  document.querySelectorAll(".tech-stack-box .tooltip").forEach((element) => {
-    element.style.color = isLightMode ? "black" : "#fff";
-  });
 }
 
 function hamburgerMenu() {
