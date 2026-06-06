@@ -46,4 +46,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 Made with ❤️ by Waghib
-Last Updated: December 2024
+Last Updated: December 2026
