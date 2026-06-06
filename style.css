@@ -1634,6 +1634,7 @@ footer {
     font-size: 1.42rem;
     line-height: 1.25;
     font-weight: 400;
+    margin-bottom: .5rem;
     max-width: 42rem;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -1641,27 +1642,92 @@ footer {
     overflow: hidden
 }
 
+.tech-stack {
+    margin: .5rem 0;
+    padding: .6rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .03);
+    border: 1px solid rgba(255, 255, 255, .1)
+}
+
+.tech-stack h4 {
+    margin: 0 0 .3rem;
+    color: #fff;
+    font-size: .95rem;
+    font-family: "fira code", monospace;
+    display: flex;
+    align-items: center;
+    gap: .5rem
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem
+}
+
+.tech-tag {
+    padding: .2rem .6rem;
+    border-radius: 16px;
+    background: rgba(128, 0, 255, .2);
+    color: #fff;
+    font-size: .8rem;
+    transition: all .3s ease;
+    font-family: "fira code", monospace;
+    border: 1px solid rgba(128, 0, 255, .3)
+}
+
+.tech-tag:hover {
+    background: rgba(128, 0, 255, .4);
+    transform: translateY(-1px);
+    border-color: #8000ff
+}
+
+body.light-mode .tech-stack {
+    background: rgba(0, 0, 0, .03);
+    border: 1px solid rgba(0, 0, 0, .1)
+}
+
+body.light-mode .tech-stack h4,
+body.light-mode .tech-tag {
+    color: #000
+}
+
+body.light-mode .tech-tag {
+    background: rgba(128, 0, 255, .1);
+    border-color: rgba(128, 0, 255, .2)
+}
+
+body.light-mode .tech-tag:hover {
+    background: rgba(128, 0, 255, .2);
+    border-color: rgba(128, 0, 255, .4)
+}
+
 .project-box .tech-stack {
     width: 100%;
     margin: 0 !important;
-    padding: .7rem !important;
-    max-height: 72px;
-    overflow: hidden
+    padding: .75rem .85rem !important;
+    max-height: none;
+    overflow: visible;
+    background: rgba(255, 255, 255, .035);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 8px
 }
 
 .project-box .tech-stack h4 {
-    font-size: .85rem !important;
-    margin-bottom: .45rem !important
+    font-size: 1rem !important;
+    line-height: 1.2;
+    margin-bottom: .55rem !important
 }
 
 .project-box .tech-tags {
-    gap: .35rem !important
+    gap: .45rem !important
 }
 
 .project-box .tech-tag {
     max-width: 100%;
-    padding: .18rem .55rem !important;
-    font-size: .72rem !important;
+    padding: .28rem .65rem !important;
+    font-size: .95rem !important;
     line-height: 1.25;
     white-space: normal;
     overflow-wrap: anywhere;
@@ -2465,11 +2531,12 @@ footer {
     }
 
     .project-box .tech-stack {
-        max-height: none
+        max-height: none;
+        padding: .65rem !important
     }
 
     .project-box .tech-tag {
-        font-size: .68rem !important
+        font-size: .82rem !important
     }
 
     .project-buttons {

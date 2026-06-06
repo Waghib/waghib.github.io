@@ -48,8 +48,8 @@ function visualmode() {
 
   if (profileImage) {
     profileImage.src = isLightMode
-      ? "src/webp/about-me-img2.png"
-      : "src/webp/about-me-img1.png";
+      ? "src/webp/about-me-img2.webp"
+      : "src/webp/about-me-img1.webp";
   }
 
   if (rotatingText) {
