@@ -236,6 +236,21 @@ function initTechStackMarquee() {
   stack.dataset.marqueeReady = "true";
 }
 
+function initProjectScrollStack() {
+  const stack = document.querySelector(".project-boxes-div");
+  const cards = Array.from(stack?.querySelectorAll(":scope > .project-box-wrapper") || []);
+
+  if (!stack || cards.length < 2) return;
+
+  stack.classList.add("project-scroll-stack");
+
+  cards.forEach((card, index) => {
+    card.removeAttribute("data-aos");
+    card.classList.add("project-stack-card");
+    card.style.setProperty("--project-stack-index", index + 1);
+  });
+}
+
 const TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -298,6 +313,7 @@ document.addEventListener(
 initFooterPupils();
 initCursor();
 initProjectCards();
+initProjectScrollStack();
 initTechStackMarquee();
 handleScroll();
 

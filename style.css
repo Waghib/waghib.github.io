@@ -1521,9 +1521,37 @@ footer {
     padding: 36px 20px
 }
 
+.project-boxes-div.project-scroll-stack {
+    align-items: stretch;
+    gap: 0;
+    --project-stack-top: clamp(128px, 16vh, 165px);
+    --project-stack-gap: clamp(56px, 8vh, 92px);
+    padding-top: clamp(48px, 8vh, 92px);
+    padding-bottom: clamp(260px, 34vh, 420px)
+}
+
 .cta:hover:before,
 .project-box-wrapper {
     width: 100%
+}
+
+.project-stack-card {
+    position: sticky;
+    top: var(--project-stack-top);
+    z-index: var(--project-stack-index);
+    margin-bottom: var(--project-stack-gap)
+}
+
+.project-scroll-stack .project-stack-card:last-child {
+    margin-bottom: 0
+}
+
+.project-scroll-stack .project-box {
+    background-color: var(--tech-stack-box-first-color)
+}
+
+body.light-mode .project-scroll-stack .project-box {
+    background-color: #fff
 }
 
 .project-box-wrapper[data-project-url] {
@@ -2661,6 +2689,30 @@ footer {
     .project-boxes-div {
         padding: 34px 0;
         gap: 26px
+    }
+
+    .project-boxes-div.project-scroll-stack {
+        --project-stack-top: 126px;
+        --project-stack-gap: 56px;
+        padding-top: 48px;
+        padding-bottom: 280px
+    }
+
+    .project-stack-card {
+        margin-bottom: var(--project-stack-gap)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-boxes-div.project-scroll-stack {
+        gap: 32px;
+        padding: 36px 20px
+    }
+
+    .project-stack-card {
+        margin-bottom: 0 !important;
+        position: relative;
+        top: auto
     }
 }
 
