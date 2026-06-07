@@ -1316,10 +1316,10 @@ body.light-mode .experience-card:focus-within {
 
 .frontend-dev-section {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 38px;
     overflow: visible;
     position: relative;
-    padding-bottom: 18px
+    padding: 28px 0 18px
 }
 
 .frontend-dev-section::before,
@@ -1328,7 +1328,7 @@ body.light-mode .experience-card:focus-within {
     position: absolute;
     bottom: 0;
     width: 90px;
-    height: 210px;
+    height: 190px;
     pointer-events: none;
     z-index: 4
 }
@@ -1367,7 +1367,7 @@ body.light-mode .experience-card:focus-within {
 }
 
 .tech-stack-wrapper {
-    --marquee-gap: 28px;
+    --marquee-gap: 42px;
     --marquee-offset: calc((100vw - 100%) / -2);
     width: max-content;
     min-width: 100%;
@@ -1379,10 +1379,18 @@ body.light-mode .experience-card:focus-within {
     flex-wrap: nowrap;
     gap: var(--marquee-gap);
     list-style: none;
-    margin-top: 44px;
-    padding: 22px max(24px, 4vw);
+    margin: 0;
+    padding: 16px max(24px, 4vw) 28px;
     animation: tech-stack-marquee 58s linear infinite;
     will-change: transform
+}
+
+.tech-stack-wrapper+.tech-stack-wrapper {
+    margin-top: 26px
+}
+
+.tech-stack-wrapper.tech-stack-marquee-ready {
+    animation: none
 }
 
 @keyframes tech-stack-marquee {
@@ -1402,49 +1410,44 @@ body.light-mode .experience-card:focus-within {
 }
 
 .tech-stack-box {
-    width: 150px;
-    height: 150px;
-    flex: 0 0 150px;
+    width: 92px;
+    height: 120px;
+    flex: 0 0 92px;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
-    border-radius: 24px;
-    border: 1px solid rgba(176, 243, 241, .32);
+    border: 0;
+    border-radius: 0;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, .18);
-    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background-color .25s ease
+    background: none;
+    background-image: none;
+    box-shadow: none;
+    transition: transform .25s ease, filter .25s ease
 }
 
 .tech-stack-box::before {
-    content: "";
-    position: absolute;
-    top: -34px;
-    right: -34px;
-    width: 84px;
-    height: 84px;
-    border-radius: 50%;
-    background: rgba(107, 197, 248, .08);
-    transition: transform .25s ease, background .25s ease;
-    z-index: -1
+    content: none
 }
 
 .tech-stack-box img {
-    width: 74%;
-    max-height: 76px;
+    width: 100%;
+    max-height: 72px;
+    flex: 0 0 auto;
     object-fit: contain;
     transition: transform .25s ease, filter .25s ease
 }
 
 .tech-stack-box:hover {
-    transform: translateY(-8px) scale(1.08);
-    border-color: var(--color-light-blue);
-    box-shadow: 0 22px 55px rgba(107, 197, 248, .18), 0 0 0 1px rgba(128, 0, 255, .22) inset;
+    transform: translateY(-6px) scale(1.12);
+    filter: drop-shadow(0 14px 22px rgba(107, 197, 248, .22));
     z-index: 5
 }
 
 .tech-stack-box:hover::before {
-    transform: scale(1.35);
-    background: rgba(128, 0, 255, .16)
+    transform: none;
+    background: none
 }
 
 .tech-stack-box:hover img {
@@ -1453,45 +1456,44 @@ body.light-mode .experience-card:focus-within {
 }
 
 .tech-stack-box:hover .tooltip {
-    opacity: 1;
-    transform: translate(-50%, -4px);
+    color: var(--color-light-blue);
+    transform: none;
     transition-duration: .3s
 }
 
 .tooltip {
-    position: absolute;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: calc(100% - 24px);
-    opacity: 0;
-    background: rgba(10, 10, 16, .72);
-    border: 1px solid rgba(107, 197, 248, .32);
-    padding: 5px 10px;
-    border-radius: 999px;
+    position: static;
+    max-width: 118px;
+    opacity: 1;
+    background: none;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
     justify-content: center;
-    transition-duration: .2s;
+    transition: color .2s ease, transform .2s ease;
     pointer-events: none;
-    letter-spacing: .5px;
-    font-size: 1.05rem;
-    backdrop-filter: blur(5px);
+    letter-spacing: .04em;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: center;
+    backdrop-filter: none;
     font-weight: 700;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: var(--color-white)
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    color: rgba(255, 255, 255, .74)
 }
 
 body.light-mode .tech-stack-box:hover {
-    border-color: rgba(128, 0, 255, .5);
-    box-shadow: 0 18px 42px rgba(75, 85, 99, .16), 0 0 0 1px rgba(128, 0, 255, .16) inset
+    box-shadow: none;
+    filter: drop-shadow(0 14px 20px rgba(75, 85, 99, .22))
 }
 
 body.light-mode .tooltip {
-    color: #fff;
-    background: rgba(17, 24, 39, .9);
-    border-color: rgba(128, 0, 255, .35);
-    box-shadow: 0 8px 24px rgba(15, 23, 42, .18)
+    color: rgba(17, 24, 39, .76);
+    background: none;
+    border-color: transparent;
+    box-shadow: none
 }
 
 .cta,
@@ -2821,22 +2823,28 @@ footer {
     }
 
     .tech-stack-wrapper {
-        --marquee-gap: 18px;
+        --marquee-gap: 30px;
         display: flex;
         grid-template-columns: none;
         gap: var(--marquee-gap);
-        margin-top: 28px
+        margin-top: 0;
+        padding-bottom: 22px
     }
 
     .tech-stack-box {
-        width: 122px;
-        height: 122px;
-        flex-basis: 122px;
-        border-radius: 20px
+        width: 70px;
+        height: 104px;
+        flex-basis: 70px;
+        border-radius: 0
     }
 
     .tech-stack-box img {
-        max-height: 60px
+        max-height: 54px
+    }
+
+    .tooltip {
+        max-width: 86px;
+        font-size: .92rem
     }
 }
 

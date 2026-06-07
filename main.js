@@ -223,17 +223,103 @@ function initProjectCards() {
 }
 
 function initTechStackMarquee() {
-  const stack = document.querySelector(".tech-stack-wrapper");
-  if (!stack || stack.dataset.marqueeReady === "true") return;
+  const primaryStack = document.querySelector(".tech-stack-wrapper");
+  if (!primaryStack || primaryStack.dataset.marqueeReady === "true") return;
 
-  Array.from(stack.children).forEach((item) => {
-    const clone = item.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    clone.removeAttribute("data-aos");
-    stack.appendChild(clone);
-  });
+  const createReverseStack = () => {
+    const reverseStack = primaryStack.cloneNode(true);
+    reverseStack.classList.add("tech-stack-wrapper-reverse");
+    reverseStack.setAttribute("aria-hidden", "true");
 
-  stack.dataset.marqueeReady = "true";
+    reverseStack.querySelectorAll("[data-aos]").forEach((item) => item.removeAttribute("data-aos"));
+    primaryStack.insertAdjacentElement("afterend", reverseStack);
+
+    return reverseStack;
+  };
+
+  const setupStack = (stack, direction = -1) => {
+    const originalItems = Array.from(stack.children);
+
+    originalItems.forEach((item) => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.removeAttribute("data-aos");
+      stack.appendChild(clone);
+    });
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let sequenceWidth = 0;
+    let offset = 0;
+    let velocity = 0;
+    let targetVelocity = 0;
+    let isPaused = false;
+    let lastTimestamp = null;
+
+    const updateMeasurements = () => {
+      const firstItem = stack.children[0];
+      const firstClone = stack.children[originalItems.length];
+      sequenceWidth = firstItem && firstClone ? firstClone.offsetLeft - firstItem.offsetLeft : stack.scrollWidth / 2;
+      targetVelocity = sequenceWidth / 58;
+      offset = sequenceWidth ? ((offset % sequenceWidth) + sequenceWidth) % sequenceWidth : 0;
+    };
+
+    const setPaused = (paused) => {
+      isPaused = paused;
+      stack.classList.toggle("tech-stack-marquee-paused", paused);
+    };
+
+    const animate = (timestamp) => {
+      if (lastTimestamp === null) {
+        lastTimestamp = timestamp;
+      }
+
+      const deltaTime = Math.max(0, timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+
+      const target = isPaused ? 0 : targetVelocity;
+      const easingFactor = 1 - Math.exp(-deltaTime / 0.28);
+      velocity += (target - velocity) * easingFactor;
+
+      if (sequenceWidth > 0) {
+        offset = ((offset + velocity * deltaTime) % sequenceWidth + sequenceWidth) % sequenceWidth;
+        const translateX = direction < 0 ? -offset : offset - sequenceWidth;
+        stack.style.transform = `translate3d(${translateX}px, 0, 0)`;
+      }
+
+      requestAnimationFrame(animate);
+    };
+
+    stack.dataset.marqueeReady = "true";
+    stack.classList.add("tech-stack-marquee-ready");
+
+    if (prefersReducedMotion) {
+      stack.style.transform = "translate3d(0, 0, 0)";
+      return;
+    }
+
+    updateMeasurements();
+    if (sequenceWidth > 0 && direction > 0) {
+      stack.style.transform = `translate3d(${-sequenceWidth}px, 0, 0)`;
+    }
+
+    stack.addEventListener("pointerenter", () => setPaused(true));
+    stack.addEventListener("pointerleave", () => setPaused(false));
+    stack.addEventListener("focusin", () => setPaused(true));
+    stack.addEventListener("focusout", () => setPaused(false));
+
+    if (window.ResizeObserver) {
+      new ResizeObserver(updateMeasurements).observe(stack);
+    } else {
+      window.addEventListener("resize", updateMeasurements);
+    }
+
+    requestAnimationFrame(animate);
+  };
+
+  const reverseStack = createReverseStack();
+
+  setupStack(primaryStack, -1);
+  setupStack(reverseStack, 1);
 }
 
 function initProjectScrollStack() {

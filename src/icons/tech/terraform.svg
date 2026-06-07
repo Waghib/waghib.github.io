@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Terraform">
-  <rect width="120" height="120" rx="20" fill="#19112b"/>
-  <path d="M24 24 50 38v30L24 54zm30 17 26 15v30L54 71zm30-17 26 15v30L84 54zM54 75l26 15v30L54 105z" fill="#7b42bc"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" id="terraform__Logos" viewBox="0 0 50 72"><path d="m17.2 17.5 15.5 9v18l-15.5-9v-18ZM34.5 26.5v18l15.5-9v-18l-15.5 9ZM0 7.5v18l15.5 9v-18L0 7.5ZM17.2 55.5l15.5 9v-18l-15.5-9v18Z"/></svg>
