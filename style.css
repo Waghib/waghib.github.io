@@ -1326,9 +1326,9 @@ body.light-mode .experience-card:focus-within {
 .frontend-dev-section::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     width: 90px;
-    height: 190px;
+    height: 100%;
     pointer-events: none;
     z-index: 4
 }
