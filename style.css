@@ -79,7 +79,8 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden
 }
 
 :root {
@@ -511,7 +512,7 @@ noscript {
     right: -15%;
     top: 0;
     background-color: var(--color-light-purple);
-    width: 600px;
+    width: clamp(200px, 80vw, 600px);
     height: 100vh;
     filter: blur(300px);
     opacity: .3;
@@ -2496,7 +2497,7 @@ footer {
         font-size: 2rem;
         cursor: pointer;
         display: flex;
-        transform: translate(1000px);
+        transform: translateX(100%);
         transition-duration: 1s
     }
 
