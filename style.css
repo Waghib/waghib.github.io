@@ -2623,19 +2623,29 @@ footer {
         font-size: 50%
     }
 
+    .landing-page-container {
+        justify-content: center;
+        align-items: center
+    }
+
     .text-content {
         padding-left: 0;
-        width: min(92%, 620px)
+        width: min(92%, 620px);
+        align-items: center;
+        text-align: center
     }
 
     #hello-friend {
         height: 100px;
-        font-size: 3.5rem
+        font-size: 3.5rem;
+        margin-top: 0;
+        justify-content: center
     }
 
     #name,
     #work {
-        font-size: 5.5rem
+        font-size: 5.5rem;
+        justify-content: center
     }
 
     #info-para,
@@ -2647,7 +2657,7 @@ footer {
         height: 140px;
         display: flex;
         flex-direction: column-reverse;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
         gap: 20px
     }
@@ -2764,11 +2774,14 @@ footer {
         height: auto;
         padding-top: 155px;
         padding-bottom: 64px;
-        align-items: flex-start
+        align-items: center;
+        justify-content: center
     }
 
     .text-content {
         justify-content: flex-start;
+        align-items: center;
+        text-align: center;
         height: auto
     }
 
