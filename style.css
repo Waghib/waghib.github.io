@@ -2714,14 +2714,15 @@ footer {
     }
 
     .project-boxes-div.project-scroll-stack {
-        --project-stack-top: 126px;
-        --project-stack-gap: 56px;
-        padding-top: 48px;
-        padding-bottom: 280px
+        padding-top: 36px;
+        padding-bottom: 36px;
+        gap: 26px
     }
 
     .project-stack-card {
-        margin-bottom: var(--project-stack-gap)
+        position: relative;
+        top: auto;
+        margin-bottom: 0
     }
 }
 
