@@ -2770,10 +2770,10 @@ footer {
     }
 
     .landing-page-container {
-        min-height: 100svh;
+        min-height: calc(100svh - 115px);
         height: auto;
-        padding-top: 155px;
-        padding-bottom: 64px;
+        padding-top: 24px;
+        padding-bottom: 40px;
         align-items: center;
         justify-content: center
     }
