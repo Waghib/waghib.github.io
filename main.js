@@ -2,6 +2,9 @@ const audio = document.getElementById("audioPlayer");
 const loader = document.getElementById("preloader");
 const backToTopButton = document.getElementById("backtotopbutton");
 const mobileToggleMenu = document.getElementById("mobiletogglemenu");
+const visualModeSwitch = document.getElementById("switchforvisualmode");
+const visualModeLabel = document.getElementById("labelforvisualmode");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 const burgerBars = [
   document.getElementById("burger-bar1"),
   document.getElementById("burger-bar2"),
@@ -25,14 +28,14 @@ function playpause() {
   }
 }
 
-function visualmode() {
-  document.body.classList.toggle("light-mode");
+function setVisualMode(isLightMode) {
+  document.body.classList.toggle("light-mode", isLightMode);
+  document.documentElement.style.colorScheme = isLightMode ? "light" : "dark";
 
   document.querySelectorAll(".needtobeinvert").forEach((element) => {
-    element.classList.toggle("invertapplied");
+    element.classList.toggle("invertapplied", isLightMode);
   });
 
-  const isLightMode = document.body.classList.contains("light-mode");
   const profileImage = document.querySelector(".dp img");
   const rotatingText = document.querySelector(".txt-rotate");
 
@@ -43,6 +46,22 @@ function visualmode() {
   if (rotatingText) {
     rotatingText.style.color = isLightMode ? "#7B5CD1" : "#333";
   }
+
+  if (visualModeSwitch) {
+    visualModeSwitch.checked = isLightMode;
+  }
+
+  if (visualModeLabel) {
+    visualModeLabel.setAttribute("aria-pressed", String(isLightMode));
+  }
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", isLightMode ? "#ece7e1" : "#000");
+  }
+}
+
+function visualmode() {
+  setVisualMode(!document.body.classList.contains("light-mode"));
 }
 
 function hamburgerMenu() {
@@ -385,6 +404,16 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("scroll", handleScroll, { passive: true });
+
+visualModeSwitch?.addEventListener("change", () => {
+  setVisualMode(visualModeSwitch.checked);
+});
+
+visualModeLabel?.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  event.preventDefault();
+  visualmode();
+});
 
 document.addEventListener(
   "contextmenu",
